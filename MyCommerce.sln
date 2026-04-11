@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{58
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.API", "Services\Catalog.API\Catalog.API.csproj", "{EBF73EF0-9C52-4597-B1B2-621E334DC1AD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{F2E35B3E-9711-EDEC-6202-DB40BDEED14A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Libraries\Common\Common.csproj", "{9D08203A-93FE-4255-9628-B89EABB3D488}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,11 +33,24 @@ Global
 		{EBF73EF0-9C52-4597-B1B2-621E334DC1AD}.Release|x64.Build.0 = Release|Any CPU
 		{EBF73EF0-9C52-4597-B1B2-621E334DC1AD}.Release|x86.ActiveCfg = Release|Any CPU
 		{EBF73EF0-9C52-4597-B1B2-621E334DC1AD}.Release|x86.Build.0 = Release|Any CPU
+		{9D08203A-93FE-4255-9628-B89EABB3D488}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D08203A-93FE-4255-9628-B89EABB3D488}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D08203A-93FE-4255-9628-B89EABB3D488}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9D08203A-93FE-4255-9628-B89EABB3D488}.Debug|x64.Build.0 = Debug|Any CPU
+		{9D08203A-93FE-4255-9628-B89EABB3D488}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9D08203A-93FE-4255-9628-B89EABB3D488}.Debug|x86.Build.0 = Debug|Any CPU
+		{9D08203A-93FE-4255-9628-B89EABB3D488}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D08203A-93FE-4255-9628-B89EABB3D488}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D08203A-93FE-4255-9628-B89EABB3D488}.Release|x64.ActiveCfg = Release|Any CPU
+		{9D08203A-93FE-4255-9628-B89EABB3D488}.Release|x64.Build.0 = Release|Any CPU
+		{9D08203A-93FE-4255-9628-B89EABB3D488}.Release|x86.ActiveCfg = Release|Any CPU
+		{9D08203A-93FE-4255-9628-B89EABB3D488}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{EBF73EF0-9C52-4597-B1B2-621E334DC1AD} = {5854FF58-B8C5-05C6-5BF2-ACE42193F22B}
+		{9D08203A-93FE-4255-9628-B89EABB3D488} = {F2E35B3E-9711-EDEC-6202-DB40BDEED14A}
 	EndGlobalSection
 EndGlobal
