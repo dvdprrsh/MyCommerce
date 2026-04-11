@@ -1,3 +1,4 @@
+using Catalog.API.Models;
 using Common.CQRS;
 
 namespace Catalog.API.Products.CreateProduct;
@@ -15,11 +16,20 @@ public record CreateProductResult(Guid Id);
 internal class CreateProductCommandHandler
     : ICommandHandler<CreateProductCommand, CreateProductResult>
 {
-    public Task<CreateProductResult> Handle(
-        CreateProductCommand request,
+    public async Task<CreateProductResult> Handle(
+        CreateProductCommand cmd,
         CancellationToken cancellationToken
     )
     {
-        throw new NotImplementedException();
+        var product = new Product
+        {
+            Name = cmd.Name,
+            Categories = cmd.Categories,
+            Description = cmd.Description,
+            Image = cmd.Image,
+            Price = cmd.Price,
+        };
+
+        return new CreateProductResult(Guid.NewGuid());
     }
 }
