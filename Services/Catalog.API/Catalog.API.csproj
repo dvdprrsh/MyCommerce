@@ -1,10 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <ItemGroup>
     <ProjectReference Include="..\..\Libraries\Common\Common.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Marten" Version="8.29.3" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.5" />
   </ItemGroup>
 
@@ -12,6 +13,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>9a933d04-3471-481b-bfdd-2b3158daebbb</UserSecretsId>
   </PropertyGroup>
 
 </Project>

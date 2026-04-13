@@ -1,0 +1,30 @@
+x-dotnet-vols: &dotnet-vols
+  - ~/.microsoft/usersecrets/:/home/app/.microsoft/usersecrets:ro
+  - ~/.aspnet/https:/https:ro
+x-dotnet-vars: &dotnet-vars
+  ASPNETCORE_ENVIRONMENT: Development
+  ASPNETCORE_HTTP_PORTS: 8080
+  ASPNETCORE_HTTPS_PORTS: 8081
+  ASPNETCORE_Kestrel__Certificates__Default__Path: /https/aspnetapp.pfx
+
+services:
+  catalog.api:
+    ports:
+      - 6000:8080
+      - 6060:8081
+    environment:
+      <<: *dotnet-vars
+      ConnectionStrings__Database: Server=catalog.db;Port=5432;Database=CatalogDb;User Id=postgres;Password=postgres;Include Error Detail=true
+    volumes: *dotnet-vols
+
+  catalog.db:
+    user: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: CatalogDb
+    volumes:
+      - catalog_db:/var/lib/postgresql
